@@ -1,0 +1,118 @@
+* {
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+:root{
+    --primary-color: #333;
+    --background-color: #f4f4f4;
+    --secondary-color: #555;
+    --text-color: #fff;
+    --link-color: #1E90FF;
+    --link-hover-color: #1C86EE;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+    background-color: var(--background-color); 
+    color: var(--text-color);  
+    margin-top: 60px; /* Pour éviter que le contenu soit caché sous l'en-tête */
+    margin-bottom: 60px; /* Pour éviter que le contenu soit caché sous le pied de page */
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+.card h2 {
+    margin: 0 0 10px;
+}
+.card p {
+    margin: 0 0 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:var(--link-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+}   
+.btn:hover {
+    background-color: #45a049;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+img:active {
+    transform: scale(1);
+    transition: transform 0.1s ease;
+}
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+@media (max-width: 600px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+    }
+}
+@media (max-width: 400px) {
+    .card {
+        width: 100%;
+    }
+}
+@media (max-width: 300px) {
+    .card {
+        width: 100%;
+    }
+}
