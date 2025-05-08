@@ -1,0 +1,25 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+.lmj-banner{
+    color: black;
+    text-align: right;
+    padding: 32px;
+    border-bottom: solid 3px black;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+}
+.lmj-banner-h1{
+    font-weight: bold;
+   font-size: 2.5em;
+    color : #0a8814;
+    padding-left: 32px;
+}
+.lmj-logo{
+    width: 45px;
+    height: 45px;
+    margin-left: 20px;
+    margin-top: -20px;
+}

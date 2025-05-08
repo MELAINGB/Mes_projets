@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+    <!-- This setup is not suitable for production. -->
+  <!-- Only use it in development! -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react?dev",
+      "react-dom/client": "https://esm.sh/react-dom/client?dev"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+
+
+<script type="text/babel" data-type="module">
+  import React, { StrictMode } from 'react';
+  import { createRoot } from 'react-dom/client';
+  
+  const user = {
+      name: 'Hedy Lamarr',
+      imageUrl: '../koo_2_fourchette.png',
+      imageSize: 50,
+    };
+
+    
+    export default function Profile() {
+      return (
+        <>
+          <h1>{user.name}</h1>
+          <img
+            className="avatar"
+            src={user.imageUrl}
+            alt={'Photo de ' + user.name}
+            style={{
+              width: user.imageSize,
+              height: user.imageSize
+            }}
+          
+          />
+
+        </>
+      );
+    }
+  
+  
+  const root = createRoot(document.getElementById('root'));
+  root.render(
+    <StrictMode>
+      <Profile />
+    </StrictMode>
+  );
+  </script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

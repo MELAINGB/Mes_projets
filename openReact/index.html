@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Plantes</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    function Header(){
+      const titre = "La maison jungle";
+        return (<header> <h2> {titre.toUpperCase()} </h2> </header>);
+    }
+    function Description(){
+      const text = "Ici achetez toutes les plantes dont vous avez toujours rêvé !";
+      return (<p>{text}</p>);
+    }
+    ReactDOM.render(
+      <Banner />,
+      document.getElementById('root')
+    );
+
+    function Banner(){
+      return (<div> 
+        <Header />
+        <Description />
+        <Cart />
+      </div>
+      )
+    }
+
+    function Cart(){
+      let prixMonstera = 8;
+      let prixLierre = 10;  
+      let prixBouquet = 15;
+      let total = prixMonstera + prixLierre + prixBouquet;
+      return (<div> 
+        <h3> Votre panier </h3>
+          <ul>
+            <li> Monstera : {prixMonstera} € </li>
+            <li> Lierre : {prixLierre} € </li>
+            <li> bouquet de fleurs : {prixBouquet} € </li>
+            <li> Total du panier : {total} € </li>
+          </ul>
+ 
+        </div>
+      )
+    }
+
+   
+
+  </script> 
+</body>
+</html>
